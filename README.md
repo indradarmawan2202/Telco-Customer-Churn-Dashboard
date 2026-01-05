@@ -4,6 +4,10 @@
 
 This project analyzes over 7,000 customer records from a telecommunications company to uncover churn patterns, service usage behaviors, and revenue impacts. It is built as an end-to-end analytics workflow—from data cleaning and exploratory analysis to visualization and strategic recommendations to support more informed and data-driven retention strategies.
 
+<p align="center">
+  <img src="Deleverables/Dashboards/Dashboard%20Preview.png" alt="Telco Customer Churn Dashboard" width="35%" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/>
+</p>
+
 ---
 
 ## 1. Background
@@ -99,6 +103,10 @@ This project follows the **CRISP-DM (Cross-Industry Standard Process for Data Mi
  ├── notebooks/
  │   └── Telco_Dataset.ipynb   # Main analysis notebook
  ├── Deleverables/
- │   └── Methodology/
- │       └── CRISP-DM.png      # Methodology diagram
+ │   ├── Dashboards/
+ │   │   └── Dashboard Preview.png  #  # Dashboard preview images
+ │   ├── Methodology/
+ │   │   └── CRISP-DM.png           # Methodology Workflow
+ │   └── Report/
+ │       └── PPT Telco Churn Analaysis.pdf # Project documentation
  └── README.md
