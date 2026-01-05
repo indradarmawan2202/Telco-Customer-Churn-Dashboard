@@ -2,43 +2,56 @@
 
 **Data Analytics • Customer Retention Insights • Looker Studio Dashboard**
 
-This project analyzes over 7,000 customer records from a telecommunications company to uncover churn patterns, service usage behaviors, and revenue impacts. It is built as an end-to-end analytics workflow from data cleaning and exploratory analysis to visualization and strategic recommendations to support more informed and data-driven retention strategies.
+This project analyzes over 7,000 customer records from a telecommunications company to uncover churn patterns, service usage behaviors, and revenue impacts. It is built as an end-to-end analytics workflow—from data cleaning and exploratory analysis to visualization and strategic recommendations to support more informed and data-driven retention strategies.
 
 ---
 
 ## 1. Background
 
-The telecommunications industry faces high customer churn rates, where the cost of acquiring new customers is significantly higher than retaining existing ones. Understanding *why* customers leave whether due to pricing, service quality, or contract flexibility is crucial. This project addresses that challenge by leveraging historical customer data to identify at-risk segments and guide measured interventions to improve loyalty.
+The telecommunications industry faces high customer churn rates, where the cost of acquiring new customers is significantly higher than retaining existing ones. Understanding *why* customers leave—whether due to pricing, service quality, or contract flexibility—is crucial. This project addresses that challenge by leveraging historical customer data to identify at-risk segments and guide measured interventions to improve loyalty.
 
 ---
 
-## 2. Analytical Workflow
+## 2. Methodology: CRISP-DM
+
+This project follows the **CRISP-DM (Cross-Industry Standard Process for Data Mining)** framework to ensure a structured, business-centric approach to data analysis.
+
+<p align="center">
+  <img src="Deleverables/Methodology/CRISP-DM.png" alt="CRISP-DM Methodology Workflow" width="35%" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/>
+</p>
 
 ### 1. Business Understanding
-**Defined business goals:**
-* Identify the profile of customers most likely to churn.
-* Determine which services build customer stickiness.
-* Provide actionable insights to reduce revenue loss.
+**Objective:** Reduce customer churn and increase retention rates.
+* **Key Questions:** What are the primary drivers of churn? Which customer segments are most vulnerable?
+* **Goal:** Provide actionable insights to the marketing and retention teams to reduce revenue loss.
 
-### 2. Data Collection
-* Dataset: **Telco Customer Churn** (Source: Kaggle).
-* Volume: 7,043 rows with 21 features (Demographics, Services, Account Info).
+### 2. Data Understanding
+* **Source:** **Telco Customer Churn** Dataset (Kaggle).
+* **Volume:** 7,043 rows, 21 features.
+* **Scope:** Customer demographics, services subscribed (Phone, Internet, Streaming), and account details (Tenure, Contract, Charges).
 
 ### 3. Data Preparation
-**Performed rigorous cleaning:**
-* Handled missing values in `TotalCharges`.
-* Converted data types for accurate calculation.
-* Encoded categorical variables for analysis.
-* Verified data integrity (duplicates and null checks).
+**Rigorous cleaning process to ensure data quality:**
+* **Handling Missing Values:** Imputed null values in `TotalCharges`.
+* **Type Conversion:** Corrected data types for accurate numeric calculations.
+* **Encoding:** Transformed categorical variables for analysis.
+* **Integrity Check:** Verified duplicates and consistency.
 
-### 4. Exploratory Data Analysis
-**Identified trends:**
-* Analyzed churn rates across tenure groups.
-* Evaluated the impact of payment methods and contract types.
-* Correlated monthly charges with churn probability.
+### 4. Modeling & Analysis (EDA)
+**Deep dive into data patterns:**
+* **Univariate Analysis:** Distribution of churn across tenure and services.
+* **Bivariate Analysis:** Impact of payment methods and contract types on churn.
+* **Correlation:** Analyzed the relationship between `MonthlyCharges` and churn probability.
 
-### 5. Dashboard Development
-* Built an interactive **Looker Studio dashboard** to deliver fast, insight-driven decision support for stakeholders.
+### 5. Evaluation
+**Key Insights Validation:**
+* Confirmed that **Month-to-month contracts** are the biggest churn driver.
+* Validated that high churn in the first 12 months indicates onboarding issues.
+* Identified **Electronic Check** as a high-friction payment method.
+
+### 6. Deployment
+* **Dashboarding:** Built an interactive **Looker Studio dashboard** to visualize KPIs.
+* **Reporting:** Summarized strategic recommendations for stakeholders.
 
 ---
 
@@ -85,7 +98,7 @@ The telecommunications industry faces high customer churn rates, where the cost 
  │   ├── cleaned/              # Processed data for dashboard
  ├── notebooks/
  │   └── Telco_Dataset.ipynb   # Main analysis notebook
- ├── deliverables/
- │   ├── dashboard/            # Looker Studio screenshots
- │   └── report/               # Final insights report
+ ├── Deleverables/
+ │   └── Methodology/
+ │       └── CRISP-DM.png      # Methodology diagram
  └── README.md
